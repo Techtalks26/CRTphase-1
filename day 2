@@ -147,3 +147,33 @@ int main() {
     }
     
 }
+
+
+
+//Program 7 -- Nested if-else condition
+// star home lighting 
+//day -- motion(yes/no) -- light off
+//night -- motion(yes -- 100%) (no -- 10%)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string dayOrnight;
+    bool motiondetected;
+    
+    cout << "is it day or night?.?";
+    cin >> dayOrnight;
+    cout <<"is motion detected?.";
+    cin >> motiondetected;
+    
+    if(dayOrnight == "Night" || dayOrnight == "night") {
+        if(motiondetected) {
+            cout << "turn on the led with 100% brightness";
+        }else {
+            cout << "turn on the led with 10% brightness";
+        }
+    }else{
+        cout <<"turn off the light";
+    }
+}
