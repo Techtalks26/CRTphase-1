@@ -13,7 +13,7 @@ int main() {
 } 
 
 
-//problem no 2 executing if statement
+//problem no 2 executing if-else statement
 #include<iostream>
 using namespace std;
 
@@ -23,6 +23,9 @@ int main() {
     
     if(age >= 18){
         cout << "eligible for vote";
+    } else {
+        cout << "not eligible for vote";
     }
     return 0;
 }
+
