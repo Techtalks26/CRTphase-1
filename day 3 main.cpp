@@ -117,3 +117,21 @@ if(isprime) {
     cout << "it is not a prime no";
     }
 }
+
+
+
+//program--8
+//smart phone unlock
+#include <iostream>
+using namespace std;
+
+int main () {
+    int password;
+    
+    do {
+        cout <<"enter your password";
+        cin >> password;
+    }while(password != 1234);
+    
+    cout << "phone unlocked";
+}
