@@ -9,3 +9,17 @@ int main () {
         cout << i << "";
     }
 }
+
+
+
+//program--2 
+//print even no using for loop 
+#include <iostream>
+using namespace std;
+
+int main () {
+    
+    for(int i = 0; i<=10; i += 2) {
+        cout << i << "";
+    }
+}
