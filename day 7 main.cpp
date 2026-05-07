@@ -68,3 +68,33 @@ int main () {
     child obj1;
     obj1.accesslocker();
 }
+
+
+
+// problem -- 4
+//constructor
+//4.1 parameterized constructor 
+
+#include<iostream>
+using namespace std;
+class Student{
+    
+public:
+ string name;
+ int age;
+ 
+ Student(string studentname, int studentAge) {
+     name = studentname;
+     age = studentAge;
+ }
+    
+void introduce(){
+    cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+    }
+};
+
+int main() {
+    Student s1("Abhishek",24);
+    s1.introduce();
+}
+
