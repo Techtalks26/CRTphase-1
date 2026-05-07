@@ -98,3 +98,75 @@ int main() {
     s1.introduce();
 }
 
+
+
+
+//4.2 default constructor 
+
+#include<iostream>
+using namespace std;
+class wificonnection{
+    public:
+    string networkname;
+    int password;
+    
+    wificonnection() {
+        networkname = "ACT Fibre Net";
+        password = 1234;
+    }
+    
+    void showdetails() {
+        cout << networkname << " " <<password;
+    }
+};
+
+int main () {
+    wificonnection obj1;
+    obj1.showdetails();
+}
+
+
+// problem -- 5
+//constructor overloading
+
+#include<iostream>
+using namespace std;
+
+class rectangle {
+  public:  
+    int length;
+    int width;
+    
+    //constructor -- 1 (default constructor)
+    
+    rectangle() {
+        length = 10;
+        width = 20;
+    }
+    
+    // constuctor -- 2 (parameterized constructor)
+    
+    rectangle (int l) {
+        length = l;
+        width = 20;
+    }
+    
+    // constructor -- 3 (parameterized constructor)
+    rectangle (int l, int b){
+        length = l;
+        width = b;
+    }
+    
+    void area() {
+        cout << length * width;
+    }
+};
+
+int main() {
+    //rectangle r1;
+    //r1.area();
+    //rectangle r2(5);
+    //r2.area();
+   rectangle r3(5,2);
+   r3.area();
+}
