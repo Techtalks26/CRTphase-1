@@ -103,3 +103,73 @@ int main () {
     b.start();
     b.drive();
 }
+
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+//problem -- 1 
+//types of inheritance 
+// 1.5 -- hybrid inheritance -- diamond problem solution -- virtual base class 
+
+class a {
+    public:
+    void print() {
+        cout << "hi there...";
+    }
+};
+
+class b : virtual public a {
+  // no logic
+};
+
+class c : virtual public a {
+  //no logic   
+};
+
+class d : public b , public c {
+  //no logic  
+};
+
+int main(){
+    d obj1;
+    obj1.print();
+}
+
+
+
+
+#include<iostream>
+using namespace std;
+
+//problem -- 2
+// Encapsulation 
+
+class bankaccount {
+private:
+    int bankbalance;
+public:
+    void setbalance(int amount) {
+        if (amount>=0) {
+            bankbalance = amount;
+        }else {
+            cout << "enter a valid amount";
+        }
+    }
+    int getbalance(){
+        return bankbalance;
+    }
+};
+
+int main() {
+    bankaccount obj1;
+    obj1.setbalance(5000);
+    cout << obj1.getbalance();
+}
