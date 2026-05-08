@@ -106,9 +106,36 @@ int main () {
 
 
 
+#include<iostream>
+using namespace std;
 
+//problem -- 1 
+//types of inheritance 
+// 1.4 -- multiple inheritance -- error wala program
 
+class parent1 {
+    public:
+    void paisedo() {
+        cout << "mummy paise de do ghumne jana hai...";
+    }
+};
 
+class parent2 {
+    public:
+    void paisedo(){
+        cout << "papa paise dedo books laani hai...";
+    }
+};
+
+class child : public parent1, public parent2 {
+    //no logic
+};
+
+int main() {
+    child c;
+    c.paisedo();
+    //c.paisedopapa();
+}
 
 
 
