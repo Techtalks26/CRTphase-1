@@ -102,3 +102,47 @@ bool ispalindrome (string str){
      }
      return 0;
  }
+
+
+
+//problem - 6
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "enter a size of an array..";
+    cin >> n;
+    
+    int arr[n];
+    
+    cout << " enter the sorted array...";
+    for(int i = 0; i< n; i++) {
+        cin >>arr[i];
+    }
+    int target;
+    cout << "enter the target element";
+    cin >> target;
+    
+    //binary search order 
+    int low = 0;
+    int high = n-1;
+    bool found = false;
+    
+    while(low <= high) {
+        int mid =(low + high) / 2;
+        
+        if(arr[mid] == target) {
+            cout << "element found at index" << mid;
+            found = true;
+            break;
+        } else if(arr[mid] < target) {
+            low = mid + 1;
+        }else {
+            high = mid - 1;
+        }
+    }
+    if(found == false) {
+        cout << "elements not found";
+    }
+}
