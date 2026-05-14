@@ -316,3 +316,23 @@ int main()
     display();
     return 0;
 }
+
+
+
+//problem -- 6
+// reverse linked list 
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+       ListNode* prev = nullptr;
+       ListNode* curr = head;
+
+       while(curr != nullptr){
+        ListNode* next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+       }
+       return prev;
+    }
+};
